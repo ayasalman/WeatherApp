@@ -24,14 +24,11 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var dateLabel: UILabel!
     
-    
     @IBOutlet weak var sunsetLabel: UILabel!
-    
     
     @IBOutlet weak var sunRiseLabel: UILabel!
     
     @IBOutlet weak var pressureUIView: UIView!
-    
     
     @IBOutlet weak var cloudLabel: UILabel!
     
@@ -43,91 +40,55 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var feelsLikeLabel: UILabel!
     
-    
     @IBOutlet weak var weatherDescription: UILabel!
-    
-    
-    @IBOutlet weak var timeZoneLabel: UILabel!
-    
     
     @IBOutlet weak var loaderIndicator: UIActivityIndicatorView!
     
-    
     @IBOutlet weak var TemperatureLabel: UILabel!
-    
     
     @IBOutlet weak var pressureLabel: UILabel!
     
     @IBOutlet weak var humidityLabel: UILabel!
     
-    
     @IBOutlet weak var cityLabel: UILabel!
     
     var cityID = "360630"
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-       
-        headerUIView.layer.cornerRadius = 20
-        headerUIView.layer.shadowColor = UIColor.white.cgColor
-        headerUIView.layer.shadowOpacity = 0.5
-        headerUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        headerUIView.layer.shadowRadius = 1
-        
-        
-        humidityUIView.layer.cornerRadius = 20
-        humidityUIView.layer.shadowColor = UIColor.white.cgColor
-        humidityUIView.layer.shadowOpacity = 0.5
-        humidityUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        humidityUIView.layer.shadowRadius = 1
-        
-        
-        
-        pressureUIView.layer.cornerRadius.round()
-        pressureUIView.layer.cornerRadius = 20
-        pressureUIView.layer.shadowColor = UIColor.white.cgColor
-        pressureUIView.layer.shadowOpacity = 0.5
-        pressureUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        pressureUIView.layer.shadowRadius = 1
-        
-        windUIView.layer.cornerRadius.round()
-        windUIView.layer.cornerRadius = 20
-        windUIView.layer.shadowColor = UIColor.white.cgColor
-        windUIView.layer.shadowOpacity = 0.5
-        windUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        windUIView.layer.shadowRadius = 1
-        
-        
-        cloudsUIView.layer.cornerRadius.round()
-        cloudsUIView.layer.cornerRadius = 20
-        cloudsUIView.layer.shadowColor = UIColor.white.cgColor
-        cloudsUIView.layer.shadowOpacity = 0.5
-        cloudsUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        cloudsUIView.layer.shadowRadius = 1
-        
-        sunsetUIView.layer.cornerRadius.round()
-        sunsetUIView.layer.cornerRadius = 20
-        sunsetUIView.layer.shadowColor = UIColor.white.cgColor
-        sunsetUIView.layer.shadowOpacity = 0.5
-        sunsetUIView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        sunsetUIView.layer.shadowRadius = 1
-        
-        sunriseUiView.layer.cornerRadius.round()
-        sunriseUiView.layer.cornerRadius = 20
-        sunriseUiView.layer.shadowColor = UIColor.white.cgColor
-        sunriseUiView.layer.shadowOpacity = 0.5
-        sunriseUiView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        sunriseUiView.layer.shadowRadius = 1
-
-        
-       // mainView.backgroundColor = UIColor.white.withAlphaComponent(0.1) //UIColor(white: 1, alpha: 0.1)
-        
+        updateUI(view: headerUIView)
+        updateUI(view: humidityUIView)
+        updateUI(view: pressureUIView)
+    
+        roundedView(view: windUIView)
+        roundedView(view: cloudsUIView)
+        roundedView(view: sunsetUIView)
+        roundedView(view: sunriseUiView)
+     
         NotificationCenter.default.addObserver(self, selector: #selector(cityChanged), name: NSNotification.Name(rawValue: "CityNameChanged"), object: nil)
         
      getCity()
+    }
+    
+    func updateUI(view: UIView) {
+        view.layer.cornerRadius = 20
+        view.layer.shadowColor = UIColor.white.cgColor
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowOffset = CGSize(width: -1, height: 1)
+        view.layer.shadowRadius = 1
+        
+    }
+    
+    func roundedView (view: UIView)
+    {
+        view.layer.cornerRadius.round()
+        view.layer.cornerRadius = 20
+        view.layer.shadowColor = UIColor.white.cgColor
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowOffset = CGSize(width: -1, height: 1)
+        view.layer.shadowRadius = 1
     }
     
     
@@ -240,12 +201,9 @@ class ViewController: UIViewController {
                 self.windLabel.text = "\(windSpeed)m/s"
                 self.cloudLabel.text = "\(cloud)%"
                 
-            
-                
             }
         }
     }
-    
     
 }
 

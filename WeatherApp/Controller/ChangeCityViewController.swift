@@ -25,44 +25,7 @@ class ChangeCityViewController: UIViewController {
                        City(name: "Al Fayyūm", id: "361323")
     ]
     
-    //"id": 360995,
-    //"name": "Giza"
-    //
-    //"id": 358245,
-    //"name": "Dahab",
-    //
-    //"id": 358448,
-    //"name": "Damanhūr",
-    //
-    //"id": 358619,
-    //"name": "Port Said",
-    //
-    //"id": 359781,
-    //"name": "Muḩāfaz̧at Asyūţ",
-    //
-    //"id": 359787,
-    //"name": "Muḩāfaz̧at Aswān",
-    //
-    //"id": 359796,
-    //"name": "Suez",
-    //
-    //"id": 360016,
-    //"name": "Muḩāfaz̧at ash Sharqīyah",
-    //
-    //"id": 360688,
-    //"name": "Muḩāfaz̧at al Minyā",
-    //
-    //"id": 360829,
-    //"name": "Al Maḩallah al Kubrá",
-    //
-    //"id": 361055,
-    //"name": "Ismailia",
-    //
-    //"id": 361058,
-    //"name": "Alexandria",
-    //
-    //"id": 361323,
-    //"name": "Muḩāfaz̧at al Fayyūm",
+
 
     
     var selectedCity : City?
