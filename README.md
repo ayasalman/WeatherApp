@@ -2,7 +2,7 @@
 An elegant iOS application built with Swift and UIKit that provides real-time weather data for major Egyptian cities. Powered by the OpenWeatherMap API and Alamofire, the app showcases responsive UI, dynamic data handling, and modular architecture.
 
 
-====================================================================================
+==================================================
 
 
 🚀 Features
@@ -53,7 +53,7 @@ Clean separation using MVC
 
 Communication via NotificationCenter
 
-====================================================================================
+==================================================
 
 🏗️ Architecture
 
@@ -87,7 +87,7 @@ City.swift:
 Model struct for city name and ID
 
 
-====================================================================================
+==================================================
 
 🧱 Tech Stack
 
@@ -103,14 +103,14 @@ Model struct for city name and ID
 
 ✅ OpenWeatherMap API
 
-====================================================================================
+==================================================
 
 🧪 Dependencies
 Alamofire
 
 Make sure to run pod install or add Alamofire via Swift Package Manager.
 
-====================================================================================
+==================================================
 
 🔧 Setup Instructions
 
@@ -122,7 +122,7 @@ Run the project on a simulator or device.
 
 Tap the Edit City button to select another Egyptian city.
 
-====================================================================================
+==================================================
 
 
 📌 Notes
@@ -133,18 +133,18 @@ All time data is converted to local device time.
 
 NotificationCenter is used for simple communication between view controllers.
 
-====================================================================================
+==================================================
 
 📽 Demo Video
 
 https://github.com/ayasalman/WeatherApp/issues/1#issue-3091381774
 
-====================================================================================
+==================================================
 
 📝 License
 This project is open-source and available under the MIT License.
 
-====================================================================================
+==================================================
 
 👩‍💻 Author
 Aya
